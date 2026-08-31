@@ -1,37 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Primer Proyecto con Tailwind CSS</title>
-<!-- Importación del CDN de Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Miembros - Modo Oscuro</title>
+    <!-- Importación del CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100 flex items-center justify-center min-h-screen p-4">
-<h1 class="text-2xl font-bold text-sky-600">¡Hey muy buenas a todos guapisimos!</h1>
+<body class="bg-slate-950 min-h-screen flex items-center justify-center p-6 antialiased">
+
+    <!-- Reto 3: Grilla Responsive -->
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full">
+
+        <!-- Tarjeta 1: Billy -->
+        <article class="bg-slate-900 rounded-2xl shadow-xl p-6 border border-slate-800 text-center hover:shadow-emerald-500/10 hover:border-slate-700 transition duration-300 flex flex-col justify-between">
+            <div>
+                <!-- Foto de Perfil con Anillo de Estado -->
+                <div class="relative w-24 h-24 mx-auto mb-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbUOBsX7ZaSX8lIByFJwi0tEGNOYuxH_4hslGoEbA9Ig&s=10"
+                         alt="Avatar de Billy"
+                         class="rounded-full object-cover w-full h-full border-4 border-emerald-500 shadow-lg shadow-emerald-500/20">
+                    <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
+                </div>
+
+                <!-- Nombre y Rol -->
+                <h1 class="text-xl font-bold text-white">Billy</h1>
+                <p class="text-sm font-medium text-emerald-400 mb-3">El poseedor del conocimiento</p>
+                <p class="text-slate-400 text-xs mb-4 leading-relaxed">
+                    Filósofo, programador y amante de la tecnología. Siempre en busca de aprender y compartir conocimientos.
+                </p>
+
+                <!-- Badges de Habilidades -->
+                <div class="flex justify-center gap-2 mb-4 flex-wrap">
+                    <span class="bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs px-2.5 py-1 rounded-full font-semibold">HTML5</span>
+                    <span class="bg-sky-950/80 border border-sky-800/50 text-sky-300 text-xs px-2.5 py-1 rounded-full font-semibold">Tailwind</span>
+                    <span class="bg-amber-950/80 border border-amber-800/50 text-amber-300 text-xs px-2.5 py-1 rounded-full font-semibold">JavaScript</span>
+                </div>
+
+                <!-- Reto 2: Barra de Estadísticas -->
+                <div class="flex justify-around bg-slate-800/60 border border-slate-700/50 rounded-xl p-3 mb-4 text-center">
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Proyectos</span>
+                        <span class="text-sm font-bold text-white">14</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Seguidores</span>
+                        <span class="text-sm font-bold text-white">1.2k</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Nivel</span>
+                        <span class="text-sm font-bold text-white">85</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reto 1: Botón Esmeralda -->
+            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-900/30 transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                Seguir Perfil
+            </button>
+        </article>
+
+        <!-- Tarjeta 2: Ada -->
+        <article class="bg-slate-900 rounded-2xl shadow-xl p-6 border border-slate-800 text-center hover:shadow-emerald-500/10 hover:border-slate-700 transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="relative w-24 h-24 mx-auto mb-4">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                         alt="Avatar de Ada"
+                         class="rounded-full object-cover w-full h-full border-4 border-emerald-500 shadow-lg shadow-emerald-500/20">
+                    <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
+                </div>
+
+                <h2 class="text-xl font-bold text-white">Ada</h2>
+                <p class="text-sm font-medium text-emerald-400 mb-3">Arquitecta de Software</p>
+                <p class="text-slate-400 text-xs mb-4 leading-relaxed">
+                    Especialista en sistemas distribuidos y bases de datos. Apasionada por el código limpio y la optimización.
+                </p>
+
+                <div class="flex justify-center gap-2 mb-4 flex-wrap">
+                    <span class="bg-indigo-950/80 border border-indigo-800/50 text-indigo-300 text-xs px-2.5 py-1 rounded-full font-semibold">Python</span>
+                    <span class="bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-xs px-2.5 py-1 rounded-full font-semibold">Docker</span>
+                    <span class="bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-xs px-2.5 py-1 rounded-full font-semibold">PostgreSQL</span>
+                </div>
+
+                <div class="flex justify-around bg-slate-800/60 border border-slate-700/50 rounded-xl p-3 mb-4 text-center">
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Proyectos</span>
+                        <span class="text-sm font-bold text-white">28</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Seguidores</span>
+                        <span class="text-sm font-bold text-white">3.4k</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Nivel</span>
+                        <span class="text-sm font-bold text-white">94</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-900/30 transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                Seguir Perfil
+            </button>
+        </article>
+
+        <!-- Tarjeta 3: Alan -->
+        <article class="bg-slate-900 rounded-2xl shadow-xl p-6 border border-slate-800 text-center hover:shadow-emerald-500/10 hover:border-slate-700 transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="relative w-24 h-24 mx-auto mb-4">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                         alt="Avatar de Alan"
+                         class="rounded-full object-cover w-full h-full border-4 border-emerald-500 shadow-lg shadow-emerald-500/20">
+                    <span class="absolute bottom-1 right-1 w-4 h-4 bg-amber-400 border-2 border-slate-900 rounded-full" title="Ausente"></span>
+                </div>
+
+                <h2 class="text-xl font-bold text-white">Alan</h2>
+                <p class="text-sm font-medium text-emerald-400 mb-3">Diseñador UI/UX</p>
+                <p class="text-slate-400 text-xs mb-4 leading-relaxed">
+                    Transformando ideas complejas en interfaces intuitivas. Amante de la tipografía y los modos oscuros.
+                </p>
+
+                <div class="flex justify-center gap-2 mb-4 flex-wrap">
+                    <span class="bg-purple-950/80 border border-purple-800/50 text-purple-300 text-xs px-2.5 py-1 rounded-full font-semibold">Figma</span>
+                    <span class="bg-sky-950/80 border border-sky-800/50 text-sky-300 text-xs px-2.5 py-1 rounded-full font-semibold">Tailwind</span>
+                    <span class="bg-pink-950/80 border border-pink-800/50 text-pink-300 text-xs px-2.5 py-1 rounded-full font-semibold">CSS3</span>
+                </div>
+
+                <div class="flex justify-around bg-slate-800/60 border border-slate-700/50 rounded-xl p-3 mb-4 text-center">
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Proyectos</span>
+                        <span class="text-sm font-bold text-white">19</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Seguidores</span>
+                        <span class="text-sm font-bold text-white">2.1k</span>
+                    </div>
+                    <div class="border-r border-slate-700/50 h-8 self-center"></div>
+                    <div>
+                        <span class="block text-xs text-slate-400 font-medium">Nivel</span>
+                        <span class="text-sm font-bold text-white">88</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-900/30 transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                Seguir Perfil
+            </button>
+        </article>
+
+    </main>
+
 </body>
-</html><div class="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full border border-slate-200 text-center hover:shadow-2xl transition duration-300">
-<!-- Foto de Perfil con Anillo de Estado -->
-<div class="relative w-24 h-24 mx-auto mb-4">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbUOBsX7ZaSX8lIByFJwi0tEGNOYuxH_4hslGoEbA9Ig&s=10"
-alt="Avatar"
-class="rounded-full object-cover w-full h-full border-4 border-indigo-500 shadow-md">
-<span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></span>
-</div>
-<!-- Nombre y Rol -->
-<h2 class="text-xl font-bold text-slate-800">Billy</h2>
-<p class="text-sm font-medium text-indigo-600 mb-3">El poseedor del conocimiento</p>
-<p class="text-slate-500 text-xs mb-4 leading-relaxed">
-Filosofo, programador y amante de la tecnología. Siempre en busca de aprender y compartir conocimientos con la comunidad.
-</p>
-<!-- Etiquetas / Badges de Habilidades -->
-<div class="flex justify-center gap-2 mb-6">
-<span class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1 rounded-full font-semibold">HTML5</span>
-<span class="bg-sky-50 text-sky-700 text-xs px-3 py-1 rounded-full font-semibold">Tailwind</span>
-<span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full font-semibold">JavaScript</span>
-</div>
-<!-- Botón de Contacto con Efecto Hover -->
-<button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-4 rounded-xl shadow-lg shadow-indigo-200 transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0">
-Seguir Perfil
-</button>
-</div>
+</html>
